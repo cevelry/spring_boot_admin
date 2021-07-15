@@ -464,6 +464,7 @@
                 <tbody>
                   <tr>
                   <th>Photo</th>
+                  	<th>Username</th>
                     <th><i class="icon_profile"></i> Full Name</th>
                     <th><i class="icon_calendar"></i>Hire Date</th>
                     <th><i class="icon_mail_alt"></i> Email</th>
@@ -477,11 +478,13 @@
 						 <img th:src="@{'/img/photos/' + ${employee.id} +'.jpg'}" width="40" height="40">
 						 </a>
 				    </td>
+				    <td><a th:text="${employee.username} ?: 'Check'" th:href="@{/employees/assignUsername/(id=${employee.id})}"></a></td>
 					<td th:text="${employee.firstname} + ' ' + ${employee.lastname}">Fullname</td>
 					<td th:text="${employee.hireDate}">HireDate</td>
 					<td th:text="${employee.email}">Email</td>
 					<td th:text="${employee.city}">City</td>
-					<td th:text="${employee.phone}">Phone</td>					
+					<td th:text="${employee.phone}">Phone</td>
+								
                     <td>
                       <div class="btn-group">
                         <a class="btn btn-primary" id="editButton" th:href="@{/employees/findById/(id=${employee.id})}"><i class="icon_pencil-edit"></i></a>
@@ -890,6 +893,7 @@
 				</td>
 			</tr>
 		</table>
+		 <input type="hidden" id="txtUsernameEdit" name="username">
 		  <button type="submit" class="btn btn-primary">Sign in</button>
 		</form>
       </div>

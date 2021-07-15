@@ -67,5 +67,12 @@ public class EmployeeController {
 		return "redirect:/employees";
 	}	
 	
+	//Assign Employee Username
+	@RequestMapping(value = "/employees/assignUsername")
+	public  String assignUsername(int id){
+		employeeService.assignUsername(id);
+		return "redirect:/employees";
+	}
+	
 	
 }

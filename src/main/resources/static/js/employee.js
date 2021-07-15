@@ -27,7 +27,8 @@ $('document').ready(function() {
 			$('#txtSSNEdit').val(employee.socialSecurityNumber);			
 			$('#ddlStateEdit').val(employee.stateid);	
 			$('#ddlTitleEdit').val(employee.title);			
-			$('#ddlEmployeeTypeEdit').val(employee.employeetypeid);				
+			$('#ddlEmployeeTypeEdit').val(employee.employeetypeid);	
+			$('#txtUsernameEdit').val(employee.username);			
 			var hireDate = employee.hireDate.substr(0,10);
 			$('#txtHireDateEdit').val(hireDate);
 			$('#ddlJobTitleEdit').val(employee.jobtitleid);			
